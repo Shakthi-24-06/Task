@@ -1,16 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #f06, #4a90e2);
+  background: #1a1a1a;           /* Very dark gray for low glare */
+  color: #f0f0f0;                /* Almost white for great contrast */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
 }
 .container {
-  background: rgba(255,255,255,0.15);
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  background: #222;              /* Slightly lighter dark for container */
+  border-radius: 12px;
+  box-shadow: 0 10px 32px rgba(0,0,0,0.20);
   padding: 2rem;
   width: 400px;
 }
@@ -21,17 +22,23 @@ input[type="text"] {
   flex: 1;
   padding: 8px;
   border-radius: 8px 0 0 8px;
-  border: none;
+  border: 1px solid #444;
   font-size: 1rem;
+  background: #333;
+  color: #f0f0f0;
 }
 #addBtn {
   padding: 8px 12px;
   border-radius: 0 8px 8px 0;
   border: none;
-  background: #ff6b6b;
+  background: #007bff;            /* Accessible blue */
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
+  transition: background 0.2s;
+}
+#addBtn:hover {
+  background: #0056b3;
 }
 ul {
   list-style: none;
@@ -41,14 +48,14 @@ ul {
 li {
   display: flex;
   align-items: center;
-  background: rgba(255,255,255,0.2);
+  background: #2a2a2a;
   margin-top: 0.5rem;
   padding: 8px;
   border-radius: 8px;
 }
 li.completed .task-text {
   text-decoration: line-through;
-  color: grey;
+  color: #aaa;
 }
 .task-text {
   flex: 1;
@@ -60,6 +67,8 @@ button.edit, button.delete {
   border: none;
   background: none;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
 }
-button.edit { color: #1e90ff; }
-button.delete { color: #ff4757; }
+button.edit { color: #ffc107; }     /* Yellow/Amber */
+button.delete { color: #ff5252; }   /* Soft red */
