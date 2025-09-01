@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f06, #4a90e2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  background: rgba(255,255,255,0.15);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  padding: 2rem;
+  width: 400px;
+}
+.input-section {
+  display: flex;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  font-size: 1rem;
+}
+#addBtn {
+  padding: 8px 12px;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  background: #ff6b6b;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+li {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.2);
+  margin-top: 0.5rem;
+  padding: 8px;
+  border-radius: 8px;
+}
+li.completed .task-text {
+  text-decoration: line-through;
+  color: grey;
+}
+.task-text {
+  flex: 1;
+  margin: 0 8px;
+  cursor: pointer;
+}
+button.edit, button.delete {
+  margin-left: 4px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+button.edit { color: #1e90ff; }
+button.delete { color: #ff4757; }
