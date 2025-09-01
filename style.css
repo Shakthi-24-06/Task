@@ -1,7 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #1a1a1a;           /* Very dark gray for low glare */
-  color: #f0f0f0;                /* Almost white for great contrast */
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #181f2a;         /* Deep blue-gray */
+  color: #23272f;              /* Dark text for contrast */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,36 +9,44 @@ body {
   margin: 0;
 }
 .container {
-  background: #222;              /* Slightly lighter dark for container */
-  border-radius: 12px;
-  box-shadow: 0 10px 32px rgba(0,0,0,0.20);
-  padding: 2rem;
-  width: 400px;
+  background: #fff;            /* Clean white card */
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(20, 40, 90, 0.14);
+  padding: 2.25rem 2rem 2rem 2rem;
+  width: 410px;
+}
+h1 {
+  color: #294ca7;
+  margin-top: 0;
+  letter-spacing: 2px;
+  text-align: center;
 }
 .input-section {
   display: flex;
+  margin-bottom: 1em;
 }
 input[type="text"] {
   flex: 1;
-  padding: 8px;
-  border-radius: 8px 0 0 8px;
-  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 7px 0 0 7px;
+  border: 1px solid #ccd6f7;
   font-size: 1rem;
-  background: #333;
-  color: #f0f0f0;
+  background: #f5f7fb;
+  color: #222;
 }
 #addBtn {
-  padding: 8px 12px;
-  border-radius: 0 8px 8px 0;
+  padding: 10px 18px;
+  border-radius: 0 7px 7px 0;
   border: none;
-  background: #007bff;            /* Accessible blue */
+  background: #365be1;          /* Accessible cool blue */
   color: #fff;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
   transition: background 0.2s;
 }
 #addBtn:hover {
-  background: #0056b3;
+  background: #294ca7;
 }
 ul {
   list-style: none;
@@ -48,27 +56,34 @@ ul {
 li {
   display: flex;
   align-items: center;
-  background: #2a2a2a;
-  margin-top: 0.5rem;
-  padding: 8px;
+  background: #f5f7fb;
+  margin-top: 0.7rem;
+  padding: 10px;
   border-radius: 8px;
+  transition: background 0.2s;
 }
 li.completed .task-text {
   text-decoration: line-through;
-  color: #aaa;
+  color: #b0b3c3;
 }
 .task-text {
   flex: 1;
   margin: 0 8px;
   cursor: pointer;
+  font-size: 1rem;
 }
 button.edit, button.delete {
-  margin-left: 4px;
+  margin-left: 6px;
   border: none;
   background: none;
   cursor: pointer;
-  font-weight: bold;
   font-size: 1em;
+  font-weight: bold;
 }
-button.edit { color: #ffc107; }     /* Yellow/Amber */
-button.delete { color: #ff5252; }   /* Soft red */
+button.edit { color: #faad14; }     /* Soft orange for Edit */
+button.delete { color: #f95f62; }   /* Soft coral for Delete */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #365be1;           /* Blue for checked */
+}
